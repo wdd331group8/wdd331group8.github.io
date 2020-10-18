@@ -1,5 +1,5 @@
 node_modules
-*.css
 .cache
 build
 .DS_Store
+zengarden/style-guide-group8/src/css/style-guide-bkup.css
