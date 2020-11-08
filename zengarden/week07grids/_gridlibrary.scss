@@ -1,0 +1,19 @@
+    //variables
+    $num-columns : 8;
+    $one-column : 100% / $num_columns;
+    $loop-start: 1;
+    $loop-end: $num-columns +1;
+
+    //make column classes 
+    @for $index from $loop-start to $loop-end {
+        .col-#{$index} {
+            @include col($index);
+        }
+    }
+    
+    //make offset classes
+    @for $index from $loop-start to $loop-end {
+        .offset-#{$index} {
+            @include offset($index);
+        }
+    }

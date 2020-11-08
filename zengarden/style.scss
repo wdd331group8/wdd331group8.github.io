@@ -1,0 +1,154 @@
+$bg-white: #fff;
+
+#css-zen-garden {
+  display: grid;
+  grid-template-areas:
+    "top"
+    "bottom";
+  height: 400px;
+  position: relative;
+  max-width: 100%;
+}
+
+#css-zen-garden::before {
+  grid-area: top;
+  content: url("https://raw.githubusercontent.com/wdd331group8/wdd331group8.github.io/main/zengarden/assets/Round-sky.svg");
+  height: 1;
+  left: 10%;
+  width: 65%;
+  top: 25px;
+  z-index: 1;
+  margin: 0 auto;
+  position: absolute;
+  overflow: hidden;
+  animation: sun-movement 55s linear infinite;
+}
+
+#css-zen-garden::after {
+  grid-area: top;
+  content: url("https://raw.githubusercontent.com/wdd331group8/wdd331group8.github.io/main/zengarden/assets/clouds.svg");
+  height: 350px;
+  width: 40%;
+  top: 50px;
+  margin: 0 auto;
+  z-index: 2;
+  position: absolute;
+  overflow: hidden;
+  animation: cloud-movement 25s linear infinite;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "row1"
+    "row2"
+    "row3"
+    "row4"
+    "row5"
+    "row6"
+    "footer";
+  margin-top: 200px;
+}
+
+.page-wrapper > * {
+  background-color: $bg-white;
+}
+
+.intro {
+  grid-area: row2;
+  z-index: 10;
+}
+
+.main {
+  grid-area: row3;
+  z-index: 10;
+}
+
+aside {
+  grid-area: row4;
+  z-index: 10;
+}
+
+footer {
+  grid-area: footer;
+  z-index: 10;
+}
+
+@keyframes sun-movement {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-450deg);
+  }
+}
+
+@keyframes cloud-movement {
+  0% {
+    transform: translateX(50px);
+  }
+  25% {
+    transform: translateX(250px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  75% {
+    transform: translateX(250px);
+  }
+  100% {
+    transform: translateX(50px);
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .page-wrapper {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "row1 row1 row1"
+      "row2 row2 row2"
+      "row3 row3 side"
+      "row4 row4 side"
+      "row5 row5 side"
+      "row6 row6 side"
+      "row7 row7 side"
+      "row8 row8 side"
+      "row9 row9 side"
+      "row10 row10 side"
+      "footer footer footer";
+    margin-top: 400px;
+  }
+
+  .page-wrapper > * {
+    background-color: $bg-white;
+}
+
+.intro {
+  padding-right: 325px;
+}
+
+  aside {
+  grid-area: side;
+  margin-left: 50px;
+  }
+
+  @keyframes cloud-movement {
+    0% {
+      transform: translateX(550px);
+    }
+    25% {
+      transform: translateX(250px);
+    }
+    50% {
+      transform: translateX(550px);
+    }
+    75% {
+      transform: translateX(250px);
+    }
+    100% {
+      transform: translateX(550px);
+    }
+  }
+}
