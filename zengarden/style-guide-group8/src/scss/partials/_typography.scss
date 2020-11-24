@@ -5,7 +5,7 @@ $secondary-font:'Commissioner', sans-serif;
 h1,
 h2 {
   font-family: $secondary-font;
-  color: $color-2;
+  color: $color-rays;
 }
 
 h1 {
@@ -36,13 +36,13 @@ h2 {
 
 section > h2::before {
   /* number before each section title */
-  color: darken($color-4, 15%);
+  color: darken($color-clouds, 15%);
 }
 
 p {
   font-size: 1.4rem;
   line-height: 1.4;
-  color: lighten($color-2, 25%);
+  color: lighten($color-rays, 25%);
 
   a {
     color: $color-1;
