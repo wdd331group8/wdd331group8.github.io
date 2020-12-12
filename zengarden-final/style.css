@@ -237,7 +237,7 @@ a:hover {
 @media only screen and (min-width: 700px) {
   .page-wrapper {
     display: grid;
-    grid-template-areas: "header header header" "row1 row1 row1" "row2 row2 ." "row3 row3 side" "row4 row4 side" "row5 row5 side" "row6 row6 side" "row7 row7 side" "row8 row8 side" "row9 row9 side" "row10 row10 side" "footer footer footer";
+    grid-template-areas: "header header header" "row1 row1 row1" "row2 row2 side" "row3 row3 side" "row4 row4 side" "row5 row5 side" "row6 row6 side" "row7 row7 side" "row8 row8 side" "row9 row9 side" "row10 row10 side" "footer footer footer";
     margin-top: 400px;
   }
 
