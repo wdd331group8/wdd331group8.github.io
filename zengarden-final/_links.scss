@@ -1,0 +1,16 @@
+// extensions 
+.links {
+    a {
+        color:$color-rays;
+        font-family:$secondary-font ;
+    }
+
+    &:visited {
+        color: $color-sun;
+    }
+
+    &:hover {
+        color: $color-sun;
+        text-decoration: underline;
+    }
+}

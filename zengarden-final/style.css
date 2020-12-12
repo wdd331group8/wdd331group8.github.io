@@ -1,0 +1,277 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Commissioner&family=Sansita+Swashed&display=swap");
+.links a {
+  color: #D6B2A5;
+  font-family: "Commissioner", sans-serif;
+}
+.links:visited {
+  color: #FFDD91;
+}
+.links:hover {
+  color: #FFDD91;
+  text-decoration: underline;
+}
+
+#css-zen-garden {
+  display: grid;
+  grid-template-areas: "top" "bottom";
+  position: relative;
+  height: 600px;
+  max-width: 100%;
+  background-image: linear-gradient(#FFDD91 1%, #D6B2A5 21%, #B093A3, #787492, #282E54);
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+#css-zen-garden::before {
+  grid-area: top;
+  content: url("https://raw.githubusercontent.com/wdd331group8/wdd331group8.github.io/main/zengarden/assets/Round-sky.svg");
+  height: 1;
+  left: 10%;
+  width: 75%;
+  top: 25px;
+  z-index: 0;
+  margin: 0 auto;
+  position: absolute;
+  overflow: hidden;
+  animation: sun-movement 55s linear infinite;
+}
+
+#css-zen-garden::after {
+  grid-area: top;
+  content: url("https://raw.githubusercontent.com/wdd331group8/wdd331group8.github.io/main/zengarden/assets/clouds.svg");
+  height: 350px;
+  width: 40%;
+  top: 50px;
+  margin: 0 auto;
+  z-index: 2;
+  position: absolute;
+  overflow: hidden;
+  animation: cloud-movement 28s linear infinite;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-areas: "header" "row1" "row2" "row3" "row4" "row5" "row6" "footer";
+  margin-top: 200px;
+  background-image: linear-gradient(#D6B2A5, #B093A3, #787492, #282E54);
+  z-index: 1;
+}
+
+.intro {
+  grid-area: row2;
+  z-index: 10;
+}
+
+.main {
+  grid-area: row3;
+  z-index: 10;
+}
+
+aside {
+  border: 4px dotted #fff;
+  border-radius: 20px;
+  grid-area: row4;
+  z-index: 10;
+  font-family: "Sansita Swashed", cursive;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+aside h3 {
+  color: #FFDD91;
+}
+aside li {
+  color: #FFDD91;
+}
+aside a {
+  color: #fff;
+}
+
+li:before {
+  content: "★";
+  margin-left: -20px;
+  margin-right: 10px;
+}
+
+footer {
+  grid-area: footer;
+  z-index: 10;
+}
+
+h1 {
+  font-family: "Sansita Swashed", cursive;
+  font-size: 2rem;
+  color: #282E54;
+  padding-left: 10px;
+}
+
+h2 {
+  font-family: "Commissioner", sans-serif;
+  font-size: 1.25rem;
+  color: #787492;
+  padding-left: 10px;
+}
+
+p {
+  padding: 0px 10px 0px 10px;
+}
+
+.summary {
+  font-family: "Commissioner", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.preamble {
+  border: 4px dotted #fff;
+  border-radius: 20px;
+  font-family: "Commissioner", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+.preamble h3 {
+  font-family: "Sansita Swashed", cursive;
+  font-size: 1.5rem;
+  padding-left: 10px;
+  color: #FFDD91;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.explanation {
+  font-family: "Commissioner", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+.explanation h3 {
+  font-family: "Sansita Swashed", cursive;
+  font-size: 1.5rem;
+  padding-left: 10px;
+  color: #FFDD91;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.participation {
+  font-family: "Commissioner", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  border: 4px dotted #fff;
+  border-radius: 20px;
+}
+.participation h3 {
+  font-family: "Sansita Swashed", cursive;
+  font-size: 1.5rem;
+  padding-left: 10px;
+  color: #FFDD91;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.benefits {
+  font-family: "Commissioner", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+.benefits h3 {
+  font-family: "Sansita Swashed", cursive;
+  font-size: 1.5rem;
+  padding-left: 10px;
+  color: #FFDD91;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.requirements {
+  font-family: "Commissioner", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  border: 4px dotted #fff;
+  border-radius: 20px;
+}
+.requirements h3 {
+  font-family: "Sansita Swashed", cursive;
+  font-size: 1.5rem;
+  padding-left: 10px;
+  color: #FFDD91;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+a {
+  color: #FFDD91;
+  font-family: "Commissioner", sans-serif;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+a:visited {
+  color: #fa9364;
+}
+
+a:hover {
+  color: #FFDD91;
+  text-decoration: underline;
+  transform: scale(1.5);
+}
+
+@keyframes sun-movement {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-450deg);
+  }
+}
+@keyframes cloud-movement {
+  0% {
+    transform: translateX(50%);
+  }
+  25% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  75% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+@media only screen and (min-width: 700px) {
+  .page-wrapper {
+    display: grid;
+    grid-template-areas: "header header header" "row1 row1 row1" "row2 row2 ." "row3 row3 side" "row4 row4 side" "row5 row5 side" "row6 row6 side" "row7 row7 side" "row8 row8 side" "row9 row9 side" "row10 row10 side" "footer footer footer";
+    margin-top: 400px;
+  }
+
+  .page-wrapper > * {
+    background-color: transparent;
+  }
+
+  aside {
+    grid-area: side;
+    margin-left: 50px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  @keyframes cloud-movement {
+    0% {
+      transform: translateX(100%);
+    }
+    25% {
+      transform: translateX(50%);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+    75% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

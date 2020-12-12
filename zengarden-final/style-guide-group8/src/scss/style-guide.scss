@@ -1,0 +1,265 @@
+@import 'partials/reset';
+@import 'partials/prefix-mixins';
+@import 'partials/layout'; // responsive grid and media queries
+
+/* -------------------------------- 
+
+Colors
+
+-------------------------------- */
+
+@import 'partials/colors';
+
+/* -------------------------------- 
+
+xBackground 
+
+-------------------------------- */
+
+body {
+  /* this is the page background */
+  background-color: $color-night;
+}
+
+/* -------------------------------- 
+
+xPatterns
+
+-------------------------------- */
+
+.cd-box {
+  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
+  border: 1px solid $color-clouds;
+  border-radius: 3px;
+  background: $color-night;
+  box-shadow: 0 1px 1px rgba(#000, 0.05);
+  padding: 6px;
+}
+
+/* -------------------------------- 
+
+xNavigation 
+
+-------------------------------- */
+
+@import 'partials/navigation';
+
+/* -------------------------------- 
+
+xPage title 
+
+-------------------------------- */
+
+main > h1 {
+  color: $color-sunrays;
+
+  @include MQ(L) {
+    /* title goes into the header on big devices */
+    color: $color-night;
+  }
+}
+
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+
+@import 'partials/typography';
+
+/* -------------------------------- 
+
+xButtons 
+
+-------------------------------- */
+
+.btn {
+  border: none;
+  box-shadow: none;
+  border-radius: 0.25em;
+  font: {
+    size: 1.4rem;
+    family: $secondary-font;
+  }
+  color: $color-night;
+  padding: 0.6em 2.2em;
+  cursor: pointer;
+  background: $color-sun;
+
+  &:focus {
+    outline: none;
+  }
+
+  .no-touch &:hover {
+    background: lighten($color-sun, 5%);
+  }
+
+  &.btn-success {
+    background: $success;
+
+    .no-touch &:hover {
+      background: lighten($success, 5%);
+    }
+  }
+
+  &.btn-alert {
+    background: $alert;
+
+    .no-touch &:hover {
+      background: lighten($alert, 5%);
+    }
+  }
+
+  &.btn-outline {
+    color: $color-sun;
+    background: transparent;
+    box-shadow: inset 0 0 0 1px $color-sun;
+
+    .no-touch &:hover {
+      color: $color-night;
+      background: $color-sun;
+    }
+  }
+
+  @include MQ(S) {
+    font-size: 1.6rem;
+  }
+}
+
+.cd-buttons .cd-box:nth-of-type(2) span {
+  /* CSS class name color */
+  color: $color-sun;
+}
+
+/* -------------------------------- 
+
+xIcons 
+
+-------------------------------- */
+
+.cd-icons li {
+  /* icons size */
+  width: 32px;
+  height: 32px;
+}
+
+/* -------------------------------- 
+
+xForm 
+
+-------------------------------- */
+
+input[type='text'],
+select {
+  border: 1px solid $color-clouds;
+  border-radius: 0.25em;
+  background: $color-night;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type='text'] {
+  padding: 0.6em 1em;
+  box-shadow: inset 1px 1px rgba(#000, 0.03);
+
+  &.success {
+    border-color: $success;
+    box-shadow: 0 0 6px rgba($success, 0.2);
+  }
+
+  &.alert {
+    border-color: $alert;
+    box-shadow: 0 0 6px rgba($alert, 0.2);
+  }
+
+  &:focus {
+    border-color: $color-sun;
+    box-shadow: 0 0 6px rgba($color-sun, 0.2);
+  }
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.radio-label,
+.checkbox-label {
+  padding-left: 24px;
+  @include user-select(none);
+
+  &::before,
+  &::after {
+    /* custom radio and check boxes */
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+
+  &::before {
+    left: 0;
+    border: 1px solid $color-clouds;
+    box-shadow: inset 1px 1px rgba(#000, 0.03);
+  }
+
+  &::after {
+    left: 3px;
+    background: url('../assets/form/icon-check.svg') no-repeat center center;
+    display: none;
+  }
+}
+
+.radio-label::before {
+  border-radius: 50%;
+}
+
+.checkbox-label::before {
+  border-radius: 3px;
+}
+
+input[type='radio']:checked + label::before,
+input[type='checkbox']:checked + label::before {
+  background-color: $color-sunrays;
+  border: none;
+  box-shadow: none;
+}
+
+input[type='radio']:checked + label::after,
+input[type='checkbox']:checked + label::after {
+  display: block;
+}
+
+.cd-select::after {
+  /* switcher arrow for select element */
+  content: '';
+  position: absolute;
+  z-index: 1;
+  right: 14px;
+  top: 50%;
+  @include transform(translateY(-50%));
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url('../assets/form/icon-select.svg') no-repeat center center;
+  pointer-events: none;
+}
+
+select {
+  position: relative;
+  padding: 0.6em 2em 0.6em 1em;
+  cursor: pointer;
+  @include appearance(none);
+}
+
+@import 'partials/basic-style';

@@ -1,0 +1,20 @@
+
+//mixins 
+@mixin style-paragraph{
+    font-family:$secondary-font;
+    font-size: 1rem;
+    color: $bg-white; 
+}
+
+@mixin style-h3{
+  font-family:$heading-font;
+  font-size: 1.5rem;
+  padding-left:10px;
+  color:$color-sun;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@mixin border-style{
+   border: 4px  dotted $bg-white;  
+   border-radius: 20px;
+}
